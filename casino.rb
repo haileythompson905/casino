@@ -6,7 +6,6 @@
 # Player's bankroll goes up and down with wins and losses
 
 require_relative 'player'
-require_relative 'high_low'
 require_relative 'roulette'
 
 
@@ -19,23 +18,17 @@ class Casino
   def show_menu
     begin
       puts "What game to play?"
-      puts "1. Slots"
-      puts "2. High/Low"
-      puts "3. Roulette"
-      puts "4. Check dollar amount"
-      puts "5. Exit"
+      puts "1. Roulette"
+      puts "2. Check dollar amount"
+      puts "3. Exit"
       response = gets.strip.to_i
     raise "Error Bad input" unless response > 0 && response < 6
   case response
   when 1
-    # Slots.new(@player)
+    Roulette.new(@player)
   when 2
-    HighLow.new(@player)
-  when 3
-    # Roulette.new(@player)
-  when 4
     puts "You have $#{@player.money}" 
-  when 5
+  when 3
     puts "Goodbye! Come back soon!"
     Exit
   else 

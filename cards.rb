@@ -10,21 +10,22 @@ class Card
   end
  end
 
- def to_i
-  case @rank
-    When "A"
-    return 1
-    When "J" 
-    return 11
-    When "Q"
-    return 12
-    When "K"
-    return 13
-  else @rank.to_i
-  end
-end
+#  def to_i
+#   case @rank
+#     When "A"
+#     return 1
+#     When "J" 
+#     return 11
+#     When "Q"
+#     return 12
+#     When "K"
+#     return 13
+#     else @rank.to_i
+#   end
+# end
+#   def to_s
+#     return "#{@rank} #{@suit} (#{color})"
+#   end
+# end
 
-def to_s
-  return "#{@rank} #{@suit} (#{color})"
-end
-end
+
