@@ -42,14 +42,14 @@ class Roulette
 
 
   def bet_amount
-    puts "What number will you be betting on?"
+    puts "How much do you want to bet?"
     @money = gets.chomp.to_i
   end
 
   def bet_num
     bet_amount
     @money_num = @money
-    puts "How much would you like to bet?"
+    puts "What number do you want to bet on?"
     @num_choice = gets.chomp.to_i
   end
 

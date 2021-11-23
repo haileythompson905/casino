@@ -5,4 +5,7 @@ def initialize
   @name = gets.strip
   @money = 250.0
 end
+
+Def deduct_wallet
+
 end

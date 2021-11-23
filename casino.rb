@@ -7,6 +7,7 @@
 
 require_relative 'player'
 require_relative 'roulette'
+require_relative 'war'
 
 
 class Casino
@@ -19,16 +20,19 @@ class Casino
     begin
       puts "What game to play?"
       puts "1. Roulette"
-      puts "2. Check dollar amount"
-      puts "3. Exit"
+      puts "2. War"
+      puts "3. Check dollar amount"
+      puts "4. Exit"
       response = gets.strip.to_i
     raise "Error Bad input" unless response > 0 && response < 6
   case response
   when 1
     Roulette.new(@player)
   when 2
-    puts "You have $#{@player.money}" 
+    War.new(@player)
   when 3
+    puts "You have $#{@player.money}" 
+  when 4
     puts "Goodbye! Come back soon!"
     Exit
   else 
