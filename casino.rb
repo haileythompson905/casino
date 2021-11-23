@@ -8,7 +8,7 @@
 require_relative 'player'
 require_relative 'roulette'
 require_relative 'war'
-
+require_relative 'rockpapersiccors'
 
 class Casino
   def initialize

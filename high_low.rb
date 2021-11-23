@@ -21,7 +21,7 @@ class HighLow
           if is_correct = first_card.to_i <= second_card.to_i
             puts "You won!"
           else
-          puts "You lost.."
+          puts "You lost."
           end
           wager *= -1 if !is_correct
           @player.money += wager 
