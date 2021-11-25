@@ -10,6 +10,7 @@ require_relative 'roulette'
 require_relative 'war'
 require_relative 'rock_paper_sissors'
 require_relative 'high_low'
+require_relative 'black_jack'
 
 class Casino
   def initialize
@@ -24,8 +25,9 @@ class Casino
       puts "2. War"
       puts "3. Rock paper sissors"
       puts "4. High low"
-      puts "3. Check dollar amount"
-      puts "4. Exit"
+      puts "5. Black Jack"
+      puts "6. Check dollar amount"
+      puts "7. Exit"
       response = gets.strip.to_i
     raise "Error Bad input" unless response > 0 && response < 6
   case response
@@ -38,8 +40,10 @@ class Casino
   when 4
     High_low.new(@player)
   when 5
+    Black_jack.new(@player)
+  when 6
     puts "You have $#{@player.money}" 
-  when 4
+  when 7
     puts "Goodbye! Come back soon!"
     Exit
   else 
