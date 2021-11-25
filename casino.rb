@@ -29,7 +29,7 @@ class Casino
       puts "6. Check dollar amount"
       puts "7. Exit"
       response = gets.strip.to_i
-    raise "Error Bad input" unless response > 0 && response < 6
+    raise "Error Bad input" unless response > 0 && response < 8
   case response
   when 1
     Roulette.new(@player)
@@ -49,12 +49,12 @@ class Casino
   else 
     raise
   end
-  show_menu
   rescue StandardError => e
       puts e
       retry
     end
   end
+  show_menu
 end
 
 Casino.new

@@ -68,7 +68,7 @@ class Roulette
     else
     @color = "black"
     # end
-    puts "Wheel reveled: #{@num} #{@color}"
+    puts "Wheel displays: #{@num} #{@color}"
   end
 
   def winning_bet
