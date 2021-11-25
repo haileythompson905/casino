@@ -1,7 +1,7 @@
 require_relative 'player.rb'
 require_relative 'deck.rb'
 
-class BlackJack
+class Black_Jack
   def initialize(player)
     @player = player
     @deck = Deck.new

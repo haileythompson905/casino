@@ -40,7 +40,7 @@ class Casino
   when 4
     High_low.new(@player)
   when 5
-    Black_jack.new(@player)
+    Black_Jack.new(@player)
   when 6
     puts "You have $#{@player.money}" 
   when 7
@@ -49,12 +49,12 @@ class Casino
   else 
     raise
   end
+  show_menu
   rescue StandardError => e
       puts e
       retry
     end
   end
-  show_menu
 end
 
-Casino.new
+Casino.new  

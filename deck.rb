@@ -20,6 +20,12 @@ class Deck
    @cards.shuffle
   end
   
+  def pull_card
+    generate_deck
+    card1 = @cards.shift
+    card1 = "#{card1.rank} #{card1.suit} (#{card1.color})"
+  end
+  
   def generate_deck
     @suits.each do |suit|
       @ranks.size.times do |i|
